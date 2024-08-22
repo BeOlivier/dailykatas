@@ -1,1 +1,0 @@
-bonus_time = lambda salary, bonus : "$"+ str(salary) if bonus == False else "$" + str(salary * 10)
