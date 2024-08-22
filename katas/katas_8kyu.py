@@ -2,7 +2,15 @@
 # These are all the 8 kyu katas from codewars that I have solved so far.
 # Each function has the name of the kata above it in a comment as they are called on codewars.
 
-#
+# modules for various functions
+import math
+
+# Beginner Series #4 Cockroach
+def cockroach_speed(s):
+    return math.floor(s*100000/3600)
+
+# Will there be enough space?
+enough = lambda cap, on, wait : 0 if cap >= on + wait else -(cap - on - wait)
 
 # L1: Set Alarm
 def set_alarm(employed, vacation):

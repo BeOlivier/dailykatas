@@ -1,5 +1,17 @@
 from dailykatas.katas import katas_8kyu
 
+def test_cockroach_speed():
+    assert katas_8kyu.cockroach_speed(1.08) == 30
+    assert katas_8kyu.cockroach_speed(0) == 0
+    assert katas_8kyu.cockroach_speed(1.09) == 30
+
+def test_enough():
+    assert katas_8kyu.enough(10, 5, 5) == 0
+    assert katas_8kyu.enough(100, 60, 50) == 10
+    assert katas_8kyu.enough(100, 100, 100) == 100
+    assert katas_8kyu.enough(100, 50, 50) == 0
+    assert katas_8kyu.enough(33, 17, 45) == 29
+
 def test_set_alarm():
     assert katas_8kyu.set_alarm(True, True) == False
     assert katas_8kyu.set_alarm(False, True) == False
