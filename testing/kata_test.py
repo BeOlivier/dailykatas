@@ -1,4 +1,10 @@
-from dailykatas.katas import katas_8kyu
+from dailykatas.katas import (
+    katas_8kyu,
+    katas_7kyu
+)
+
+def test_get_count():
+    assert katas_7kyu.get_count("aeiou") == 5
 
 def test_cockroach_speed():
     assert katas_8kyu.cockroach_speed(1.08) == 30
