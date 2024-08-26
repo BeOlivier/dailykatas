@@ -5,6 +5,10 @@
 # modules for various functions
 import math
 
+# Keep up the hoop
+def hoop_count(n):
+    return "Keep at it until you get it" if n < 10 else "Great, now move on to tricks"
+
 # Beginner Series #4 Cockroach
 def cockroach_speed(s):
     return math.floor(s*100000/3600)

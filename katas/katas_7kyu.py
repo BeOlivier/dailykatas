@@ -6,3 +6,7 @@
 
 # Vowel count
 get_count = lambda s: sum(map(s.count, ['a', 'e', 'i', 'o', 'u']))
+
+# Disemvowel Trolls
+def disemvowel(s):
+    return s.translate({ord(i): None for i in 'aeiouAEIOU'})

@@ -3,6 +3,13 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_hoop_count():
+    assert katas_8kyu.hoop_count(3) == "Keep at it until you get it" 
+    assert katas_8kyu.hoop_count(11) == "Great, now move on to tricks"
+
+def test_disemvowel():
+    assert katas_7kyu.disemvowel("This website is for losers LOL!") == "Ths wbst s fr lsrs LL!"
+
 def test_get_count():
     assert katas_7kyu.get_count("aeiou") == 5
 
