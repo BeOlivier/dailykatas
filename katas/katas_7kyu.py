@@ -4,6 +4,15 @@
 
 # modules for various functions
 
+# Square Every Digit
+def square_digits(num):
+    string_num = str(num)
+    result = ""
+    for i in string_num:
+        result += str(int(i)*int(i))
+    print(result)
+    return int(result)
+
 # Vowel count
 get_count = lambda s: sum(map(s.count, ['a', 'e', 'i', 'o', 'u']))
 

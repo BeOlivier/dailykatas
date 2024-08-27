@@ -3,6 +3,10 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_square_digits():
+    assert katas_7kyu.square_digits(9119) == 811181
+    assert katas_7kyu.square_digits(1234) == 14916
+
 def test_hoop_count():
     assert katas_8kyu.hoop_count(3) == "Keep at it until you get it" 
     assert katas_8kyu.hoop_count(11) == "Great, now move on to tricks"
