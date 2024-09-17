@@ -5,6 +5,13 @@
 # modules for various functions
 import math
 
+# Grasshopeer - check for factor
+def check_for_factor(base, factor):
+    return base % factor == 0
+
+# Twice as old
+
+
 # Keep up the hoop
 def hoop_count(n):
     return "Keep at it until you get it" if n < 10 else "Great, now move on to tricks"

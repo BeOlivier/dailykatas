@@ -3,6 +3,16 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_check_for_factor():
+    assert katas_8kyu.check_for_factor(10, 2) == True
+    assert katas_8kyu.check_for_factor(63, 7) == True
+    assert katas_8kyu.check_for_factor(2450, 5) == True
+    assert katas_8kyu.check_for_factor(24612, 3) == True
+    assert katas_8kyu.check_for_factor(9, 2) == False
+    assert katas_8kyu.check_for_factor(653, 7) == False
+    assert katas_8kyu.check_for_factor(2453, 5) == False
+    assert katas_8kyu.check_for_factor(24612, 13) == False
+
 def test_square_digits():
     assert katas_7kyu.square_digits(9119) == 811181
     assert katas_7kyu.square_digits(1234) == 14916
