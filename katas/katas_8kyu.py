@@ -10,7 +10,8 @@ def check_for_factor(base, factor):
     return base % factor == 0
 
 # Twice as old
-
+def twice_as_old(d, s):
+    return abs(d - 2*s)
 
 # Keep up the hoop
 def hoop_count(n):

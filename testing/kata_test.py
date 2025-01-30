@@ -13,6 +13,14 @@ def test_check_for_factor():
     assert katas_8kyu.check_for_factor(2453, 5) == False
     assert katas_8kyu.check_for_factor(24612, 13) == False
 
+def test_twice_as_old():
+    assert katas_8kyu.twice_as_old(36,7) == 22
+    assert katas_8kyu.twice_as_old(55,30) == 5
+    assert katas_8kyu.twice_as_old(42,21) == 0
+    assert katas_8kyu.twice_as_old(22,1) == 20
+    assert katas_8kyu.twice_as_old(29,0) == 29
+    
+
 def test_square_digits():
     assert katas_7kyu.square_digits(9119) == 811181
     assert katas_7kyu.square_digits(1234) == 14916
