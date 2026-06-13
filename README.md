@@ -1,2 +1,2 @@
 # dailykatas
-Daily katas that I solve every day
+Daily katas that I solve from time to time
