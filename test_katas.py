@@ -5,6 +5,17 @@ import katas
 # 5 kyu
 # ---------------------------------------------------------------------------
 
+def test_make_readable():
+    assert katas.make_readable(0) == "00:00:00"
+    assert katas.make_readable(59) == "00:00:59"
+    assert katas.make_readable(60) == "00:01:00"
+    assert katas.make_readable(3599) == "00:59:59"
+    assert katas.make_readable(3600) == "01:00:00"
+    assert katas.make_readable(86399) == "23:59:59"
+    assert katas.make_readable(86400) == "24:00:00"
+    assert katas.make_readable(359999) == "99:59:59"
+
+
 def test_pig_it():
     assert katas.pig_it("Pig latin is cool") == "igPay atinlay siay oolcay"
     assert katas.pig_it("This is my string") == "hisTay siay ymay tringsay"

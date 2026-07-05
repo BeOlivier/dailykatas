@@ -7,6 +7,10 @@ import string
 # 5 kyu
 # ---------------------------------------------------------------------------
 
+# Human Readable Time
+def make_readable(seconds):
+    return f"{seconds//3600 :02d}:{(seconds%3600)//60 :02d}:{(seconds%60) :02d}"
+
 # Simple Pig Latin
 def pig_it(text):
     words = text.split()
