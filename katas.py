@@ -1,0 +1,127 @@
+"""Codewars kata solutions, ordered from hardest to easiest."""
+
+import math
+import string
+
+# ---------------------------------------------------------------------------
+# 5 kyu
+# ---------------------------------------------------------------------------
+
+
+
+# ---------------------------------------------------------------------------
+# 6 kyu
+# ---------------------------------------------------------------------------
+
+# Count bits
+def countBits(n):
+    return bin(n).count("1")
+
+# Create Phone Number
+def create_phone_number(numbers):
+    return "({}{}{}) {}{}{}-{}{}{}{}".format(*numbers)
+
+
+# ---------------------------------------------------------------------------
+# 7 kyu
+# ---------------------------------------------------------------------------
+
+# Highest and Lowest
+def high_and_low(numbers):
+    values = list(map(int, numbers.split()))
+    return f"{max(values)} {min(values)}"
+
+
+# Square Every Digit
+def square_digits(number):
+    return int("".join(str(int(digit) ** 2) for digit in str(number)))
+
+
+# Vowel Count
+def get_count(text):
+    return sum(character in "aeiou" for character in text)
+
+
+# Disemvowel Trolls
+def disemvowel(text):
+    return text.translate({ord(vowel): None for vowel in "aeiouAEIOU"})
+
+
+# ---------------------------------------------------------------------------
+# 8 kyu
+# ---------------------------------------------------------------------------
+
+# Calculate Age
+def calculate_age(birth_year, current_year):
+    age = current_year - birth_year
+    if age == 0:
+        return "You were born this very year!"
+    if age == 1:
+        return "You are 1 year old."
+    if age > 1:
+        return f"You are {age} years old."
+    if age == -1:
+        return "You will be born in 1 year."
+    return f"You will be born in {-age} years."
+
+
+# Regex Count Lowercase Letters
+def lowercase_count(text):
+    return sum(character in string.ascii_lowercase for character in text)
+
+
+# Grasshopper - Check for Factor
+def check_for_factor(base, factor):
+    return base % factor == 0
+
+
+# Twice as Old
+def twice_as_old(father_age, son_age):
+    return abs(father_age - 2 * son_age)
+
+
+# Keep Up the Hoop
+def hoop_count(number):
+    if number < 10:
+        return "Keep at it until you get it"
+    return "Great, now move on to tricks"
+
+
+# Beginner Series #4 Cockroach
+def cockroach_speed(speed):
+    return math.floor(speed * 100000 / 3600)
+
+
+# Will There Be Enough Space?
+def enough(capacity, on_bus, waiting):
+    return max(0, on_bus + waiting - capacity)
+
+
+# L1: Set Alarm
+def set_alarm(employed, vacation):
+    return employed and not vacation
+
+
+# Removing Elements
+def remove_every_other(items):
+    return items[::2]
+
+
+# Remove Every Third Element
+def remove_every_third(items):
+    return items[::3]
+
+
+# Third Angle of a Triangle
+def other_angle(first_angle, second_angle):
+    return 180 - first_angle - second_angle
+
+
+# Do I Get a Bonus?
+def bonus_time(salary, bonus):
+    return f"${salary * 10 if bonus else salary}"
+
+
+# Count the Monkeys!
+def monkey_count(number):
+    return list(range(1, number + 1))

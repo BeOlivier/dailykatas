@@ -1,0 +1,128 @@
+import katas
+
+
+# ---------------------------------------------------------------------------
+# 6 kyu
+# ---------------------------------------------------------------------------
+
+def test_count_bits():
+    assert katas.countBits(0) == 0
+    assert katas.countBits(4) == 1
+    assert katas.countBits(7) == 3
+    assert katas.countBits(9) == 2
+    assert katas.countBits(10) == 2
+
+
+def test_create_phone_number():
+    assert katas.create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) == "(123) 456-7890"
+    assert katas.create_phone_number([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == "(012) 345-6789"
+
+
+# ---------------------------------------------------------------------------
+# 7 kyu
+# ---------------------------------------------------------------------------
+
+def test_high_and_low():
+    assert katas.high_and_low("1 2 3 4 5") == "5 1"
+    assert katas.high_and_low("1 2 -3 4 5") == "5 -3"
+    assert katas.high_and_low("1 9 3 4 -5") == "9 -5"
+    assert katas.high_and_low("42") == "42 42"
+
+
+def test_square_digits():
+    assert katas.square_digits(9119) == 811181
+    assert katas.square_digits(1234) == 14916
+
+
+def test_get_count():
+    assert katas.get_count("aeiou") == 5
+    assert katas.get_count("This is a test") == 4
+
+
+def test_disemvowel():
+    assert katas.disemvowel("This website is for losers LOL!") == "Ths wbst s fr lsrs LL!"
+
+
+# ---------------------------------------------------------------------------
+# 8 kyu
+# ---------------------------------------------------------------------------
+
+def test_calculate_age():
+    assert katas.calculate_age(1990, 2024) == "You are 34 years old."
+    assert katas.calculate_age(2023, 2024) == "You are 1 year old."
+    assert katas.calculate_age(2024, 2024) == "You were born this very year!"
+    assert katas.calculate_age(2025, 2024) == "You will be born in 1 year."
+    assert katas.calculate_age(2030, 2024) == "You will be born in 6 years."
+
+
+def test_lowercase_count():
+    assert katas.lowercase_count("abcABC123!") == 3
+    assert katas.lowercase_count("") == 0
+    assert katas.lowercase_count("HELLO") == 0
+    assert katas.lowercase_count("a!b.c?d e") == 5
+    assert katas.lowercase_count("abcdefghijklmnopqrstuvwxyz") == 26
+    assert katas.lowercase_count("Hello World") == 8
+
+
+def test_check_for_factor():
+    assert katas.check_for_factor(10, 2) is True
+    assert katas.check_for_factor(63, 7) is True
+    assert katas.check_for_factor(9, 2) is False
+    assert katas.check_for_factor(24612, 13) is False
+
+
+def test_twice_as_old():
+    assert katas.twice_as_old(36, 7) == 22
+    assert katas.twice_as_old(55, 30) == 5
+    assert katas.twice_as_old(42, 21) == 0
+
+
+def test_hoop_count():
+    assert katas.hoop_count(3) == "Keep at it until you get it"
+    assert katas.hoop_count(11) == "Great, now move on to tricks"
+
+
+def test_cockroach_speed():
+    assert katas.cockroach_speed(1.08) == 30
+    assert katas.cockroach_speed(0) == 0
+    assert katas.cockroach_speed(1.09) == 30
+
+
+def test_enough():
+    assert katas.enough(10, 5, 5) == 0
+    assert katas.enough(100, 60, 50) == 10
+    assert katas.enough(100, 100, 100) == 100
+    assert katas.enough(33, 17, 45) == 29
+
+
+def test_set_alarm():
+    assert katas.set_alarm(True, True) is False
+    assert katas.set_alarm(False, True) is False
+    assert katas.set_alarm(True, False) is True
+    assert katas.set_alarm(False, False) is False
+
+
+def test_other_angle():
+    assert katas.other_angle(30, 60) == 90
+    assert katas.other_angle(10, 20) == 150
+
+
+def test_bonus_time():
+    assert katas.bonus_time(2, True) == "$20"
+    assert katas.bonus_time(5, True) == "$50"
+    assert katas.bonus_time(10, False) == "$10"
+
+
+def test_remove_every_other():
+    assert katas.remove_every_other(["Keep", "Remove", "Keep", "Remove", "Keep"]) == ["Keep", "Keep", "Keep"]
+    assert katas.remove_every_other([1, 2, 3, 4, 5, 6]) == [1, 3, 5]
+
+
+def test_remove_every_third():
+    assert katas.remove_every_third([1, 2, 3, 4, 5, 6]) == [1, 4]
+    assert katas.remove_every_third(["a", "b", "c", "d", "e", "f"]) == ["a", "d"]
+
+
+def test_monkey_count():
+    assert katas.monkey_count(5) == [1, 2, 3, 4, 5]
+    assert katas.monkey_count(1) == [1]
