@@ -3,6 +3,14 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_lowercase_count():
+    assert katas_8kyu.lowercase_count("abcABC123!") == 3
+    assert katas_8kyu.lowercase_count("") == 0
+    assert katas_8kyu.lowercase_count("HELLO") == 0
+    assert katas_8kyu.lowercase_count("a!b.c?d e") == 4
+    assert katas_8kyu.lowercase_count("abcdefghijklmnopqrstuvwxyz") == 26
+    assert katas_8kyu.lowercase_count("Hello World") == 8    
+
 def test_check_for_factor():
     assert katas_8kyu.check_for_factor(10, 2) == True
     assert katas_8kyu.check_for_factor(63, 7) == True
@@ -71,4 +79,5 @@ def test_remove_every_other():
 
 def test_remove_every_third():
     assert katas_8kyu.remove_every_third([1, 2, 3, 4, 5, 6]) == [1, 4]
-    assert katas_8kyu.remove_every_third(['a', 'b', 'c', 'd', 'e', 'f']) == ['a', 'd']    
+    assert katas_8kyu.remove_every_third(['a', 'b', 'c', 'd', 'e', 'f']) == ['a', 'd']
+

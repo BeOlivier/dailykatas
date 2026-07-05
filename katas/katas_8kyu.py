@@ -4,6 +4,15 @@
 
 # modules for various functions
 import math
+import string
+
+def lowercase_count(str):
+    alphabet_lc = string.ascii_lowercase
+    count = 0
+    for i in str:
+        if i in alphabet_lc:
+            count += 1
+    return count
 
 # Grasshopeer - check for factor
 def check_for_factor(base, factor):
