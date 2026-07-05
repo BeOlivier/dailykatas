@@ -24,6 +24,15 @@ def pig_it(text):
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+# Count the number of Duplicates
+def duplicate_count(text):
+    text = text.lower()
+    list_result = []
+    for i in text:
+        if (text.count(i) > 1 and i not in list_result):
+            list_result.append(i)
+    return len(list_result)
+
 # Find the Parity Outlier
 def find_outlier(numbers):
     odd = []

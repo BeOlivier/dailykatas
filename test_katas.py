@@ -17,6 +17,14 @@ def test_pig_it():
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+def test_duplicate_count():
+    assert katas.duplicate_count("") == 0
+    assert katas.duplicate_count("abcde") == 0
+    assert katas.duplicate_count("abcdeaa") == 1
+    assert katas.duplicate_count("abcdeaB") == 2
+    assert katas.duplicate_count("Indivisibilities") == 2
+
+
 def test_find_outlier():
     assert katas.find_outlier([2, 4, 0, 100, 4, 11, 2602, 36]) == 11
     assert katas.find_outlier([160, 3, 1719, 19, 11, 13, -21]) == 160
