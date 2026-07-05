@@ -4,6 +4,10 @@
 
 # modules for various functions
 
+def high_and_low(numbers):
+    number_list = list(map(int, numbers.split()))
+    return f"{max(number_list)} {min(number_list)}"
+
 # Square Every Digit
 def square_digits(num):
     string_num = str(num)

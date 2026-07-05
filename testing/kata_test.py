@@ -3,6 +3,12 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_high_and_low():
+    assert katas_7kyu.high_and_low("1 2 3 4 5") == "5 1"
+    assert katas_7kyu.high_and_low("1 2 -3 4 5") == "5 -3"
+    assert katas_7kyu.high_and_low("1 9 3 4 -5") == "9 -5"
+    assert katas_7kyu.high_and_low("42") == "42 42"
+
 def test_calculate_age():
     assert katas_8kyu.calculate_age(1990, 2024) == "You are 34 years old."
     assert katas_8kyu.calculate_age(2000, 2024) == "You are 24 years old."
