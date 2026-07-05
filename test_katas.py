@@ -5,6 +5,13 @@ import katas
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+def test_find_outlier():
+    assert katas.find_outlier([2, 4, 0, 100, 4, 11, 2602, 36]) == 11
+    assert katas.find_outlier([160, 3, 1719, 19, 11, 13, -21]) == 160
+    assert katas.find_outlier([2, 6, 8, -10, 3]) == 3
+    assert katas.find_outlier([-1, -3, -5, -2, -7]) == -2
+
+
 def test_count_bits():
     assert katas.countBits(0) == 0
     assert katas.countBits(4) == 1

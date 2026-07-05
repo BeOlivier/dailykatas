@@ -13,6 +13,19 @@ import string
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+# Find the Parity Outlier
+def find_outlier(numbers):
+    odd = []
+    even = []
+    for number in numbers:
+        if number%2 == 0:
+            even.append(number)
+        else:
+            odd.append(number)
+    if len(even) == 1:
+        return even[0]
+    return odd[0]
+
 # Count bits
 def countBits(n):
     return bin(n).count("1")
