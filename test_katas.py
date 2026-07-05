@@ -17,6 +17,22 @@ def test_pig_it():
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+def test_alphabet_position():
+    assert katas.alphabet_position("The sunset sets at twelve o' clock.") == (
+        "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+    )
+    assert katas.alphabet_position("The narwhal bacons at midnight.") == (
+        "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20"
+    )
+
+
+def test_duplicate_encode():
+    assert katas.duplicate_encode("din") == "((("
+    assert katas.duplicate_encode("recede") == "()()()"
+    assert katas.duplicate_encode("Success") == ")())())"
+    assert katas.duplicate_encode("(( @") == "))(("
+
+
 def test_duplicate_count():
     assert katas.duplicate_count("") == 0
     assert katas.duplicate_count("abcde") == 0

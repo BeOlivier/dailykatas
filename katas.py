@@ -7,6 +7,7 @@ import string
 # 5 kyu
 # ---------------------------------------------------------------------------
 
+# Simple Pig Latin
 def pig_it(text):
     words = text.split()
     result = []
@@ -23,6 +24,26 @@ def pig_it(text):
 # ---------------------------------------------------------------------------
 # 6 kyu
 # ---------------------------------------------------------------------------
+
+# Replace With Alphabet Position
+def alphabet_position(text):
+    result = []
+
+    for char in text.lower():
+        if char.isalpha():
+            result.append(str(ord(char) - ord("a") + 1))
+    return " ".join(result)
+
+# Duplicate Encoder
+def duplicate_encode(word):
+    word = word.lower()
+    result_str = ""
+    for i in word:
+        if word.count(i) == 1:
+            result_str += "("
+        else:
+            result_str += ")"
+    return result_str
 
 # Count the number of Duplicates
 def duplicate_count(text):
