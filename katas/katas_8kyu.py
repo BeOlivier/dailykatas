@@ -6,6 +6,18 @@
 import math
 import string
 
+def calculate_age(y, c):
+    if y < c:
+        if c-y == 1:
+            return f"You are 1 year old."
+        return f"You are {c-y} years old."
+    if y > c:
+        if y-c == 1:
+            return f"You will be born in {y-c} year."
+        return f"You will be born in {y-c} years."
+    else:
+        return "You were born this very year!"
+
 def lowercase_count(str):
     alphabet_lc = string.ascii_lowercase
     count = 0

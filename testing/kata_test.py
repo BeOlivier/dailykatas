@@ -3,11 +3,19 @@ from dailykatas.katas import (
     katas_7kyu
 )
 
+def test_calculate_age():
+    assert katas_8kyu.calculate_age(1990, 2024) == "You are 34 years old."
+    assert katas_8kyu.calculate_age(2000, 2024) == "You are 24 years old."
+    assert katas_8kyu.calculate_age(2023, 2024) == "You are 1 year old."
+    assert katas_8kyu.calculate_age(2024, 2024) == "You were born this very year!"
+    assert katas_8kyu.calculate_age(2025, 2024) == "You will be born in 1 year."
+    assert katas_8kyu.calculate_age(2030, 2024) == "You will be born in 6 years."
+
 def test_lowercase_count():
     assert katas_8kyu.lowercase_count("abcABC123!") == 3
     assert katas_8kyu.lowercase_count("") == 0
     assert katas_8kyu.lowercase_count("HELLO") == 0
-    assert katas_8kyu.lowercase_count("a!b.c?d e") == 4
+    assert katas_8kyu.lowercase_count("a!b.c?d e") == 5
     assert katas_8kyu.lowercase_count("abcdefghijklmnopqrstuvwxyz") == 26
     assert katas_8kyu.lowercase_count("Hello World") == 8    
 
