@@ -2,6 +2,18 @@ import katas
 
 
 # ---------------------------------------------------------------------------
+# 5 kyu
+# ---------------------------------------------------------------------------
+
+def test_pig_it():
+    assert katas.pig_it("Pig latin is cool") == "igPay atinlay siay oolcay"
+    assert katas.pig_it("This is my string") == "hisTay siay ymay tringsay"
+    assert katas.pig_it("Hello world !") == "elloHay orldway !"
+    assert katas.pig_it("Quis custodiet ipsos custodes ?") == "uisQay ustodietcay psosiay ustodescay ?"
+    assert katas.pig_it("Python") == "ythonPay"
+
+
+# ---------------------------------------------------------------------------
 # 6 kyu
 # ---------------------------------------------------------------------------
 

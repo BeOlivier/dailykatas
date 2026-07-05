@@ -7,7 +7,18 @@ import string
 # 5 kyu
 # ---------------------------------------------------------------------------
 
+def pig_it(text):
+    words = text.split()
+    result = []
+    punctuation = "!#€%&/=?"
 
+    for word in words:
+        if word[0] not in punctuation:
+            result.append(f"{word[1:]}{word[0]}ay")
+        else:
+            result.append(word)
+
+    return " ".join(result)
 
 # ---------------------------------------------------------------------------
 # 6 kyu
