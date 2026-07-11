@@ -28,6 +28,26 @@ def test_pig_it():
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+def test_persistence():
+    assert katas.persistence(39) == 3
+    assert katas.persistence(4) == 0
+    assert katas.persistence(25) == 2
+    assert katas.persistence(999) == 4
+    assert katas.persistence(10) == 1
+    assert katas.persistence(77) == 4
+    assert katas.persistence(277777788888899) == 11
+
+
+def test_to_camel_case():
+    assert katas.to_camel_case("") == ""
+    assert katas.to_camel_case("the_stealth_warrior") == "theStealthWarrior"
+    assert katas.to_camel_case("The-Stealth-Warrior") == "TheStealthWarrior"
+    assert katas.to_camel_case("A-B-C") == "ABC"
+    assert katas.to_camel_case("alreadyCamel") == "alreadyCamel"
+    assert katas.to_camel_case("one_two-three") == "oneTwoThree"
+    assert katas.to_camel_case("the-last_test") == "theLastTest"
+
+
 def test_alphabet_position():
     assert katas.alphabet_position("The sunset sets at twelve o' clock.") == (
         "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"

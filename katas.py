@@ -29,6 +29,26 @@ def pig_it(text):
 # 6 kyu
 # ---------------------------------------------------------------------------
 
+import re
+
+# Convert string to camel case
+def to_camel_case(text):
+    words = re.split(r"[-_]", text)
+    return words[0] + "".join(word.title() for word in words[1:])
+
+# Persistent Bugger
+def persistence(num):
+    list_digits = [int(i) for i in str(num)]
+    steps = 0
+    
+    while len(list_digits) > 1:
+        temp = 1
+        for i in list_digits:
+            temp *= i
+        list_digits = [int(i) for i in str(temp)]
+        steps += 1
+    return steps
+
 # Replace With Alphabet Position
 def alphabet_position(text):
     result = []
